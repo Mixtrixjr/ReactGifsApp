@@ -1,28 +1,12 @@
-import { useState } from 'react';
 import { GifList } from './gifs/components/Gif-list.tsx';
 import { Customheader } from './shared/components/Customheader.tsx';
 import { Searchbar } from './shared/components/Searchbar.tsx';
 import { Previoussearche } from './shared/components/Previoussearche.tsx';
-import { getgifsbyquery } from './gifs/actions/get-gifs-by-query.actions.ts';
-import { Gif } from './gifs/interfaces/gif.interface.ts';
+import UseGifs from './gifs/hooks/useGifs.tsx';
 
 export const GifsApp = () => {
 
-
-    const [gifs, setgifs] = useState<Gif[]>([])
-    const [Previousterms, setPreviousTerms] = useState<string[]>([]);
-    const handleLabelClick = (term: string) => {console.log(`Termino clickeado: ${term}`);}
-    const handleSearch = (term: string) => {console.log(term)}
-    const handleSearch2 = async (term: string) => {
-      console.log(term);
-      const currentterm = Previousterms.slice(0,8 );
-      currentterm.unshift(term);
-      setPreviousTerms(currentterm);
-      const gifs = await getgifsbyquery(term)
-      console.log({gifs})
-      
-      setgifs(gifs)
-    }
+const {gifs,Previousterms,handleLabelClick,handleSearch,handleSearch2} = UseGifs()
 
 
 
