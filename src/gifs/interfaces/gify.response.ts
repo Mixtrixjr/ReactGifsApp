@@ -12,7 +12,6 @@ export interface Giphygif {
     bitly_gif_url:              string;
     bitly_url:                  string;
     embed_url:                  string;
-    username:                   string;
     source:                     string;
     title:                      string;
     rating:                     Rating;
@@ -97,24 +96,19 @@ export interface FixedHeight {
 export interface Looping {
 }
 
-export enum Rating {
-    G = "g",
-}
+export type Rating = "G" | "PG" 
 
 export enum TrendingDatetime {
     The00000000000000 = "0000-00-00 00:00:00",
 }
 
-export enum Type {
-    GIF = "gif",
-}
+export type Type = 'gif'
 
 export interface User {
     avatar_url:    string;
     banner_image:  string;
     banner_url:    string;
     profile_url:   string;
-    username:      string;
     display_name:  string;
     description:   string;
     instagram_url: string;
