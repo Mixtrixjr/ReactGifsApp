@@ -40,11 +40,16 @@ describe('getgifsbyquery', () => {
                 expect(typeof gif.width).toBe(Number)
             })
 
+            
+
     
     
 
 
 })
+test ('should return an empty list of gifs is query is empty', () => {
+
+            })
 
 })
 
