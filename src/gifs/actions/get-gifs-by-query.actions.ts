@@ -4,7 +4,12 @@ import { giphyapi } from "../api/giphy.api";
 
 export const getgifsbyquery = async(query:String):Promise<Gif[]>=> 
     {
-        const response = await giphyapi<GifyResponse>("/search",{
+        if(query.trim().length===0){
+            return []
+        }
+
+        try {
+            const response = await giphyapi<GifyResponse>("/search",{
             params:{
                 q: query,
                 limit: 10,
@@ -17,4 +22,10 @@ return response.data.data.map((Gif)=>({
     url: Gif.images.original.url,
     width: Number(Gif.images.original.width),
     height: Number(Gif.images.original.height) }))
+            
+        } catch (error) {
+            console.error(error)
+            return []
+        }
+        
     }

@@ -1,12 +1,18 @@
-import { describe, expect, test } from "vitest";
+import { beforeEach, describe, expect, test, vi } from "vitest";
 import { getgifsbyquery } from './get-gifs-by-query.actions';
 import AxiosMockadapter from  'axios-mock-adapter'
 import { giphyapi } from "../api/giphy.api";
-import { giphysearchresponsemock } from "../../test/mocks/giphy.response.data";
+import { giphysearchresponsemock } from "../../test/mocks/giphy.response.data.ts";
 
 describe('getgifsbyquery', () => {
 
-    const mock = new AxiosMockadapter(giphyapi)
+    let mock = new AxiosMockadapter(giphyapi)
+
+    beforeEach(() => {
+        //mock.reset
+
+        mock = new AxiosMockadapter(giphyapi)
+    })
 
   /*  test('should return a list of gifs',async() => {
 
@@ -47,9 +53,40 @@ describe('getgifsbyquery', () => {
 
 
 })
-test ('should return an empty list of gifs is query is empty', () => {
+test ('should return an empty list of gifs is query is empty', async () => {
+
+    mock.restore
+
+    const gifs = await getgifsbyquery('');
+    console.log(gifs)
+
+    expect(gifs.length).toBe(0)
 
             })
 
+            test ('should handle a error when the API returns an error', async () => {
+
+                const consoleErrorSpy = vi.spyOn(console,'error').mockImplementation(()=>{
+                    
+                })
+
+    mock.onGet('/search').reply(400, {data:{
+        message: 'bad request'
+    }})
+
+    const gifs = await getgifsbyquery('goku')
+
+    console.log(gifs)
+
+    expect(gifs.length).toBe(0)
+    expect (consoleErrorSpy).toHaveBeenCalledTimes(1)
+    expect (consoleErrorSpy).toHaveBeenCalledWith(expect.any)
+
+
+
 })
+
+})
+
+
 
