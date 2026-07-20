@@ -7,14 +7,14 @@ const handlesubmock = vi.fn()
 const handleresetmock = vi.fn()
 
 
-vi.mock('../hooks/usecounter',()=>({
-    Usecounter: () => ({
+vi.mock('../hooks/usecounter',()=>(({
+    default: () => ({
         Counter: 20,
         handleadd: handleaddmock,
         handlesub: handlesubmock,
         reset: handleresetmock
     })
-}))
+})))
 
 describe ('mycounterapp', () => {
 
@@ -24,10 +24,10 @@ describe ('mycounterapp', () => {
         screen.debug()
 
         
-        expect(screen.getByRole('heading',{level: 1}).innerHTML).toContain(`counter 40`);
-        expect(screen.getByRole('button',{name:'+1'})).toBeDefined;
-        expect(screen.getByRole('button',{name:'-1'})).toBeDefined;
-        expect(screen.getByRole('button',{name:'Reset'})).toBeDefined;
+        expect(screen.getByRole('heading',{level: 1}).textContent).toContain('Counter: 20');
+        expect(screen.getByRole('button',{name:'+1'})).toBeDefined();
+        expect(screen.getByRole('button',{name:'-1'})).toBeDefined();
+        expect(screen.getByRole('button',{name:'Reset'})).toBeDefined();
     })
 
     test('should call handleadd if button is clicked',() => {

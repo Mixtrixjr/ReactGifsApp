@@ -8,10 +8,10 @@ describe('mycounterapp',()=> {
 
         render(<Mycounterapp></Mycounterapp>)
 
-        expect(screen.getByRole('heading',{level: 1}).innerHTML).toContain(`counter 10`);
-        expect(screen.getByRole('button',{name:'+1'})).toBeDefined;
-        expect(screen.getByRole('button',{name:'-1'})).toBeDefined;
-        expect(screen.getByRole('button',{name:'Reset'})).toBeDefined;
+        expect(screen.getByRole('heading',{level: 1}).textContent).toContain('Counter: 5');
+        expect(screen.getByRole('button',{name:'+1'})).toBeDefined();
+        expect(screen.getByRole('button',{name:'-1'})).toBeDefined();
+        expect(screen.getByRole('button',{name:'Reset'})).toBeDefined();
 
     })
     test('Should increment the counter', ()=>{
@@ -23,7 +23,7 @@ describe('mycounterapp',()=> {
 
         fireEvent.click(btn)
 
-        expect(labelh1.innerHTML).toContain('Counter: 9 ')
+        expect(labelh1.textContent).toContain('Counter: 4')
 
 
     })

@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1784583176311" clover="3.2.0">
+  <project timestamp="1784583176311" name="All files">
+    <metrics statements="75" coveredstatements="67" conditionals="12" coveredconditionals="9" methods="26" coveredmethods="19" elements="113" coveredelements="95" complexity="0" loc="75" ncloc="75" packages="9" files="11" classes="11"/>
+    <package name="src">
+      <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+      <file name="GifsApp.tsx" path="C:\Users\Mixtrix\Desktop\React\Gifs-app\src\GifsApp.tsx">
+        <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="7" count="1" type="stmt"/>
+        <line num="9" count="1" type="stmt"/>
+        <line num="14" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.counter.components">
+      <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+      <file name="mycounterapp.tsx" path="C:\Users\Mixtrix\Desktop\React\Gifs-app\src\counter\components\mycounterapp.tsx">
+        <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="4" count="2" type="stmt"/>
+        <line num="6" count="5" type="stmt"/>
+        <line num="9" count="5" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.counter.hooks">
+      <metrics statements="9" coveredstatements="8" conditionals="1" coveredconditionals="1" methods="4" coveredmethods="3"/>
+      <file name="usecounter.tsx" path="C:\Users\Mixtrix\Desktop\React\Gifs-app\src\counter\hooks\usecounter.tsx">
+        <metrics statements="9" coveredstatements="8" conditionals="1" coveredconditionals="1" methods="4" coveredmethods="3"/>
+        <line num="4" count="2" type="cond" truecount="1" falsecount="0"/>
+        <line num="6" count="9" type="stmt"/>
+        <line num="8" count="9" type="stmt"/>
+        <line num="9" count="1" type="stmt"/>
+        <line num="11" count="9" type="stmt"/>
+        <line num="12" count="2" type="stmt"/>
+        <line num="14" count="9" type="stmt"/>
+        <line num="15" count="0" type="stmt"/>
+        <line num="17" count="9" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.gifs.actions">
+      <metrics statements="8" coveredstatements="8" conditionals="2" coveredconditionals="2" methods="2" coveredmethods="2"/>
+      <file name="get-gifs-by-query.actions.ts" path="C:\Users\Mixtrix\Desktop\React\Gifs-app\src\gifs\actions\get-gifs-by-query.actions.ts">
+        <metrics statements="8" coveredstatements="8" conditionals="2" coveredconditionals="2" methods="2" coveredmethods="2"/>
+        <line num="5" count="3" type="stmt"/>
+        <line num="7" count="6" type="cond" truecount="2" falsecount="0"/>
+        <line num="8" count="1" type="stmt"/>
+        <line num="11" count="5" type="stmt"/>
+        <line num="12" count="5" type="stmt"/>
+        <line num="19" count="40" type="stmt"/>
+        <line num="27" count="1" type="stmt"/>
+        <line num="28" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.gifs.api">
+      <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      <file name="giphy.api.ts" path="C:\Users\Mixtrix\Desktop\React\Gifs-app\src\gifs\api\giphy.api.ts">
+        <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="3" count="4" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.gifs.components">
+      <metrics statements="3" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="1"/>
+      <file name="Gif-list.tsx" path="C:\Users\Mixtrix\Desktop\React\Gifs-app\src\gifs\components\Gif-list.tsx">
+        <metrics statements="3" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="1"/>
+        <line num="9" count="1" type="stmt"/>
+        <line num="10" count="1" type="stmt"/>
+        <line num="16" count="0" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.gifs.hooks">
+      <metrics statements="23" coveredstatements="23" conditionals="2" coveredconditionals="2" methods="4" coveredmethods="3"/>
+      <file name="useGifs.tsx" path="C:\Users\Mixtrix\Desktop\React\Gifs-app\src\gifs\hooks\useGifs.tsx">
+        <metrics statements="23" coveredstatements="23" conditionals="2" coveredconditionals="2" methods="4" coveredmethods="3"/>
+        <line num="5" count="2" type="stmt"/>
+        <line num="7" count="19" type="stmt"/>
+        <line num="9" count="19" type="stmt"/>
+        <line num="11" count="19" type="stmt"/>
+        <line num="13" count="19" type="stmt"/>
+        <line num="14" count="3" type="cond" truecount="2" falsecount="0"/>
+        <line num="16" count="1" type="stmt"/>
+        <line num="17" count="1" type="stmt"/>
+        <line num="20" count="2" type="stmt"/>
+        <line num="21" count="2" type="stmt"/>
+        <line num="22" count="2" type="stmt"/>
+        <line num="23" count="2" type="stmt"/>
+        <line num="25" count="19" type="stmt"/>
+        <line num="27" count="19" type="stmt"/>
+        <line num="28" count="10" type="stmt"/>
+        <line num="29" count="10" type="stmt"/>
+        <line num="30" count="10" type="stmt"/>
+        <line num="31" count="10" type="stmt"/>
+        <line num="32" count="10" type="stmt"/>
+        <line num="33" count="10" type="stmt"/>
+        <line num="35" count="10" type="stmt"/>
+        <line num="39" count="10" type="stmt"/>
+        <line num="44" count="19" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.shared.components">
+      <metrics statements="24" coveredstatements="18" conditionals="7" coveredconditionals="4" methods="12" coveredmethods="8"/>
+      <file name="Customheader.tsx" path="C:\Users\Mixtrix\Desktop\React\Gifs-app\src\shared\components\Customheader.tsx">
+        <metrics statements="2" coveredstatements="2" conditionals="2" coveredconditionals="2" methods="1" coveredmethods="1"/>
+        <line num="7" count="2" type="stmt"/>
+        <line num="8" count="4" type="stmt"/>
+      </file>
+      <file name="Previoussearche.tsx" path="C:\Users\Mixtrix\Desktop\React\Gifs-app\src\shared\components\Previoussearche.tsx">
+        <metrics statements="3" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="1"/>
+        <line num="10" count="1" type="stmt"/>
+        <line num="12" count="1" type="stmt"/>
+        <line num="20" count="0" type="stmt"/>
+      </file>
+      <file name="Searchbar.tsx" path="C:\Users\Mixtrix\Desktop\React\Gifs-app\src\shared\components\Searchbar.tsx">
+        <metrics statements="19" coveredstatements="14" conditionals="5" coveredconditionals="2" methods="8" coveredmethods="6"/>
+        <line num="10" count="2" type="cond" truecount="1" falsecount="0"/>
+        <line num="12" count="12" type="stmt"/>
+        <line num="14" count="12" type="stmt"/>
+        <line num="15" count="12" type="stmt"/>
+        <line num="16" count="2" type="stmt"/>
+        <line num="18" count="12" type="stmt"/>
+        <line num="21" count="12" type="stmt"/>
+        <line num="22" count="1" type="stmt"/>
+        <line num="24" count="1" type="cond" truecount="1" falsecount="1"/>
+        <line num="25" count="0" type="stmt"/>
+        <line num="26" count="0" type="stmt"/>
+        <line num="29" count="1" type="stmt"/>
+        <line num="30" count="1" type="stmt"/>
+        <line num="33" count="12" type="stmt"/>
+        <line num="34" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="35" count="0" type="stmt"/>
+        <line num="40" count="12" type="stmt"/>
+        <line num="47" count="6" type="stmt"/>
+        <line num="48" count="0" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.test.mocks">
+      <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      <file name="giphy.response.data.ts" path="C:\Users\Mixtrix\Desktop\React\Gifs-app\src\test\mocks\giphy.response.data.ts">
+        <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="3" count="1" type="stmt"/>
+      </file>
+    </package>
+  </project>
+</coverage>
