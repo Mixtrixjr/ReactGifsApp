@@ -39,11 +39,11 @@ describe('getgifsbyquery', () => {
             expect(gifs.length).toBe(10)
             
             gifs.forEach(gif => {
-                expect(typeof gif.id).toBe(String)
-                expect(typeof gif.title).toBe(String)
-                expect(typeof gif.url).toBe(String)
-                expect(typeof gif.height).toBe(Number)
-                expect(typeof gif.width).toBe(Number)
+                expect(typeof gif.id).toBe('string')
+                expect(typeof gif.title).toBe('string')
+                expect(typeof gif.url).toBe('string')
+                expect(typeof gif.height).toBe('number')
+                expect(typeof gif.width).toBe('number')
             })
 
             
@@ -79,8 +79,8 @@ test ('should return an empty list of gifs is query is empty', async () => {
     console.log(gifs)
 
     expect(gifs.length).toBe(0)
-    expect (consoleErrorSpy).toHaveBeenCalledTimes(1)
-    expect (consoleErrorSpy).toHaveBeenCalledWith(expect.any)
+    expect(consoleErrorSpy).toHaveBeenCalledTimes(1)
+    expect(consoleErrorSpy.mock.calls[0][0]).toBeInstanceOf(Error)
 
 
 

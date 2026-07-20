@@ -43,7 +43,8 @@ export const Searchbar = ({ placeholder = "Buscar", OnSearch, onAddPreviousSearc
     <div className="search-container">
         <input type="text" 
         placeholder={placeholder} 
-        value={term} onChange={(event) => setTerm(event.target.value)} 
+        value={term} 
+        onChange={(event) => setTerm(event.target.value)} 
         onKeyDown={(event) => {handleKeyDown(event)}}>
         </input>
         <button onClick={handlesearch}>Buscar</button>

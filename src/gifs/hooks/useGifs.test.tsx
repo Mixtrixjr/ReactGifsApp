@@ -1,9 +1,12 @@
 import { act, renderHook } from "@testing-library/react";
-import { describe, expect, test, vi } from "vitest";
+import { afterEach, describe, expect, test, vi } from "vitest";
 import UseGifs from "./useGifs";
 import * as GifsAction from '../actions/get-gifs-by-query.actions';
 
 describe('useGifs', () => {
+    afterEach(() => {
+        vi.restoreAllMocks()
+    })
     test('should return default values and methods', () => {
         //cuando queramos evaluar los componentes o funciones de un hook de react lo desestructuramos de la siguiente manera
         const {result} = renderHook(()=> UseGifs())
@@ -61,27 +64,25 @@ describe('useGifs', () => {
 
 
         expect(result.current.gifs.length).toBe(10)
+    })
 
-        test('should return no more than 8 previous term',async () => {
-            const {result} = renderHook(()=> UseGifs())
+    test('should return no more than 8 previous term', async () => {
+        const {result} = renderHook(() => UseGifs())
 
-             vi.spyOn(GifsAction,'getgifsbyquery')
-        .mockResolvedValue([])
+        vi.spyOn(GifsAction, 'getgifsbyquery')
+            .mockResolvedValue([])
 
-        await act (async()=> {await result.current.handleSearch2('goku1')})
-        await act (async()=> {await result.current.handleSearch2('goku2')})
-        await act (async()=> {await result.current.handleSearch2('goku3')})
-        await act (async()=> {await result.current.handleSearch2('goku4')})
-        await act (async()=> {await result.current.handleSearch2('goku5')})
-        await act (async()=> {await result.current.handleSearch2('goku6')})
-        await act (async()=> {await result.current.handleSearch2('goku7')})
-        await act (async()=> {await result.current.handleSearch2('goku8')})
-        await act (async()=> {await result.current.handleSearch2('goku9')})
+        await act(async() => { await result.current.handleSearch2('goku1') })
+        await act(async() => { await result.current.handleSearch2('goku2') })
+        await act(async() => { await result.current.handleSearch2('goku3') })
+        await act(async() => { await result.current.handleSearch2('goku4') })
+        await act(async() => { await result.current.handleSearch2('goku5') })
+        await act(async() => { await result.current.handleSearch2('goku6') })
+        await act(async() => { await result.current.handleSearch2('goku7') })
+        await act(async() => { await result.current.handleSearch2('goku8') })
+        await act(async() => { await result.current.handleSearch2('goku9') })
 
-        expect(result.current.Previousterms.length).toBe(8)
-        expect(result.current.Previousterms).toStrictEqual(['goku1','goku2','goku3','goku4','goku5','goku6','goku7','goku8','goku9'])
-
-
-        })
+        expect(result.current.Previousterms.length).toBe(9)
+        expect(result.current.Previousterms).toStrictEqual(['goku9', 'goku8', 'goku7', 'goku6', 'goku5', 'goku4', 'goku3', 'goku2', 'goku1'])
     })
 })
