@@ -19,6 +19,7 @@ const UseGifs = () => {
 
             const gifs= await getgifsbyquery(term)
             setgifs(gifs)
+            gifscache.current[term] = gifs
             console.log(`Termino clickeado: ${term}`);}
 
          const handleSearch = (term: string) => {console.log(term)}
